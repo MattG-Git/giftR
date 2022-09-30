@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS giftr_db;
+CREATE DATABASE giftr_db;
