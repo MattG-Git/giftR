@@ -28,7 +28,15 @@ Gift.init(
         model: 'user',
         key: 'id',
       },
-    }
+    },
+    price: {
+      type: DataTypes.DECIMAL,
+      allowNull: true,
+    },
+    location: {
+      type: DataTypes.STRING,
+    },
+    
 
 
   },
