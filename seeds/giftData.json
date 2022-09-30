@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Emely",
+        "price": 14.99, 
+        "location": "Amazon"
+        },
+    
+{
+    "name": "Adelle",
+    "price": 29.99,
+    "location": "Walmart"
+},
+
+
+{
+    "name": "Steve",
+    "price": 39.99,
+    "location": "Amazon"
+    
+}
+
+]
