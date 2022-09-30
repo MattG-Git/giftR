@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Jean",
+        "email": "jean@hotmail.com",
+        "password": "password1",
+        "total_budget": 500
+    },
+
+    {
+        "name": "Trey",
+        "email": "trey@yahoo.com",
+        "password": "password1",
+        "total_budget": 800
+    },
+
+    {
+        "name": "Matt",
+        "email": "Matt@gmail.com",
+        "password": "password1",
+        "total_budget": 1000
+    }
+]
