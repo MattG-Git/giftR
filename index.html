@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GiftR</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3209/3209955.png">
+    <link rel="stylesheet" href="./public/css/reset.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="navbar-container">
+        <h1 id="nameLabel">GiftR</h1>
+    </div>
+
+    <h2 id="contentHeader">Welcome to GiftR for those who love to give gifts and not to stress!</h2>
+
+    <div class="contentContainer">
+        <h2>Budget</h2>
+        <progress value="32" max="100">32</progress>
+        <label for="mainBudget"></label><br>
+        <input type="number" id="budgetInput" name="mainBudget">
+    </div>
+
+    <div class="cardContainer">
+        <div class="card">
+            <h3>Dad</h3>
+            <ul id="card1Content">
+                <p>Budget:</p>
+                <p>Ideas:</p>
+                <p>Gift to Buy:</p>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Mom</h3>
+            <ul id="card2Content">
+                <p>Budget:</p>
+                <p>Ideas:</p>
+                <p>Gift to Buy:</p>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Sister</h3>
+            <ul id="card3Content">
+                <p>Budget:</p>
+                <p>Ideas:</p>
+                <p>Gift to Buy:</p>
+            </ul>
+        </div>
+    </div>
+
+    <button id="darkModeButton">Dark Mode</button>
+
+    
+
+
+	<script src="./public/js/index.js"></script>
+  </body>
+</html>

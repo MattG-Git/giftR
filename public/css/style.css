@@ -1,0 +1,142 @@
+:root{
+    --white: #f6f1eb;
+    --green: #6a8255;
+    --grey: #d7e2d7;
+    --lightgrey: #b5ccbe;
+    --brown: #574539;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: var(--grey);
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: auto;
+    background-color: var(--brown);
+}
+
+#nameLabel {
+    color: var(--grey);
+    text-align: center;
+    background-size: cover;
+    padding: 10px;
+    background-color: var(--brown);
+}
+
+#xmasNavTree{ 
+    background-color: transparent;
+}
+
+.contentContainer{
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+#contentHeader{
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: #574539 1px solid;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#mainBudget{
+    color: var(--green)
+}
+
+#budgetInput{
+    width: 100px;
+    text-align: center;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.cardContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cardContainer h3{
+    background-color: var(--green);
+    padding: 10px 100px 10px 100px;
+    margin: 10px 10px 10px 10px;
+    border: #574539 2px solid;
+}
+
+.card{
+    background-color: var(--brown);
+}
+
+#card1Content{
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+#card2Content{
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+#card3Content{
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+#darkModeButton{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border-radius: 12px;
+    padding: 4px;
+    background-position: center;
+    transition: background 1s;
+}
+
+#darkModeButton:active{
+    background-color: var(--green);
+    background-size: 100%;
+    transition: background-color 0s;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+    width: 10rem;
+    border: none;
+    border-radius: 2px;
+    padding: 12px 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: black;
+    box-shadow: 0 0 4px black;
+    outline: none;
+  }
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
