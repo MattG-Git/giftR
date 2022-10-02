@@ -1,14 +1,13 @@
 [{
-    "name": "Candle",
+    "name": "John",
     "budget": 2
 },
-
 {
-    "name": "Parfum",
+    "name": "Joe",
     "budget": 1 
 },
 {
-    "name": "Candle",
+    "name": "Sarah",
     "budget": 2
 }
 ]
