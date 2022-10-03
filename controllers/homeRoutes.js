@@ -2,27 +2,32 @@ const router = require('express').Router();
 const { People, User, Gift } = require('../models');
 const withAuth = require('../utils/auth');
 
+//  router.get('/', async (req, res) => {
+//       try {
+//         const peopleData = await People.findAll({
+//           include: [
+//             {
+//               model: User,
+//               attributes: ['name'],
+//           },
+//         ],
+//       });
+
+//   const people = peopleData.map((p) => p.get({ plain: true }));
+
+//       res.render('main', { 
+//               people, 
+//               logged_in: req.session.logged_in 
+//           });
+//         } catch (err) {
+//             res.status(500).json(err);
+//         }
+//  });
+
 router.get('/', async (req, res) => {
-  try {
-    const peopleData = await People.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
-
-    const people = peopleData.map((p) => p.get({ plain: true }));
-
-    res.render('homepage', { 
-      people, 
-      logged_in: req.session.logged_in 
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
+  res.render('all')
 });
+  
 
 router.get('/people/:id', async (req, res) => {
   try {
