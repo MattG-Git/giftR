@@ -19,4 +19,6 @@ Gift.belongsTo(People,{
     foreignKey: 'people_id'
 });
 
-module.exports = { People,Gift,User};
+
+
+module.exports = { People, Gift, User };

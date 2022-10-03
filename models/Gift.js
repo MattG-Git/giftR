@@ -36,9 +36,6 @@ Gift.init(
     location: {
       type: DataTypes.STRING,
     },
-    
-
-
   },
   {
     sequelize,

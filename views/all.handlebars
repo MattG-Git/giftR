@@ -1,14 +1,23 @@
+<h3>Hi {{name}}!</h3>
+{{#if people.length}}
+<div class="row">
+{{#each people as |people|}}
  <div class="cardContainer d-flex p-3 justify-content-center">
         <div class="card m-2 align-self-start" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">Mom</h5>
-              <h6 class="card-title">Ideas:</h5>
+              <h5 class="card-title">{{people.name}} ${{people.budget}}</h5>
+              <h6 class="card-title">Gift: {{people.gift.name}}</h6>
                 <ul style="list-style-type: none;">
-                    <li><a href="#">Item 1</a></li>
-                    <li><a href="#">Item 2</a></li>
-                    <li><a href="#">Item 3</a></li>
+                    <li>{{people.gift.price}}</li>
+                    <li>{{people.gift.location}}</li>
                 </ul>
-              <button type="button" id="loginButton" style="width: 75px" class="mt-2 mb-2 p-3 btn btn-light btn-outline-dark btn-sm rounded-pill">Edit</button>
+              <button type="button" id="editButton" style="width: 75px" class="mt-2 mb-2 p-3 btn btn-light btn-outline-dark btn-sm rounded-pill">Edit</button>
             </div>
         </div>
 </div>
+{{/each}}
+</div>
+{{/if}}
+<button type="button" id="addButton" style="width: 75px" class="mt-2 mb-2 p-3 btn btn-light btn-outline-dark btn-sm rounded-pill">Add A Person</button>
+
+	  <script src="./js/all.js"></script>

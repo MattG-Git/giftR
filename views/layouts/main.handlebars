@@ -22,10 +22,16 @@
     <!-- Navbar / Title "GiftR" -->
     <div id="titleHeader" class=" justify-content-around bg-dark">
         <h1 class="mt-2 pt-2 align-item-start text-center">GiftR</h1> 
+
+        {{#if logged_in}}
+        <button type="button" id="logOutButton" style="position: absolute; top: 0; right: 0; font-weight: bolder; width: 120px" class="mt-2 mb-2 p-3 btn btn-light btn-outline-dark btn-sm rounded-pill">Logout</button>
+        {{else}}
         <button type="button" id="loginButton" style="position: absolute; top: 0; right: 0; font-weight: bolder; width: 120px" class="mt-2 mb-2 p-3 btn btn-light btn-outline-dark btn-sm rounded-pill">Login</button>
         <!-- Keeping the option for lightmode button just encase, but since we have snow I think it looks good enough. -->
         <!-- <button type="button" id="themeModeButton" style="font-weight: bolder; width: 120px" class="mt-2 mb-2 p-3 btn btn-light btn-outline-dark btn-sm rounded-pill">Light Mode</button> -->
+        {{/if}}
     </div> 
+
     <!-- Future Budget List / Budget Progression -->
     <div class="text-light mt-2 pt-2">
         <h2 class="text-center">Welcome to GiftR for those who love to give gifts and not to stress!</h2>
@@ -34,12 +40,15 @@
     </div>
     <!-- Cards Container Handlebar-->
     {{{body}}}
-    <footer>
+    {{!-- <footer>
  <div class="text-center p-3" style="position: absolute; bottom: 0; width: 100%; background-color: rgba(0, 0, 0, 0.2);">
         <h6 class="text-light">© 2022 Copyright:</h6>
         <h5><a class="text-light" href="https://github.com/MattG-Git/giftR">Giftr</a></h5>
   </div>
-    </footer>
-	<script src="./js/index.js"></script>
+    </footer> --}}
+	  <script src="./js/index.js"></script>
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
   </body>
 </html>
