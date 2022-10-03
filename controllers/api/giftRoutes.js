@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     const gifts = await Gift.findAll({
     });
 
-    res.render('people', {
+    res.render('all', {
       gifts,
     });
   } catch (err) {
