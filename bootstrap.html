@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GiftR</title>
     <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3209/3209955.png">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./public/css/reset.css">
+    <link rel="stylesheet" href="./public/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -32,14 +32,48 @@
         <h2 class="text-center">Holiday Christmas Budget List</h2>
         <h2 class="text-center">Budget:</h2>
     </div>
-    <!-- Cards Container Handlebar-->
-    {{{body}}}
+    <!-- Cards Container -->
+    <div class="cardContainer d-flex p-3 justify-content-center">
+        <div class="card m-2 align-self-start" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Mom</h5>
+              <h6 class="card-title">Ideas:</h5>
+                <ul style="list-style-type: none;">
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Item 2</a></li>
+                    <li><a href="#">Item 3</a></li>
+                </ul>
+              <button type="button" id="loginButton" style="width: 75px" class="mt-2 mb-2 p-3 btn btn-light btn-outline-dark btn-sm rounded-pill">Edit</button>
+            </div>
+        </div>
+        <div class="card m-2 align-self-start" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Sister</h5>
+              <h6 class="card-title">Ideas:</h6>
+                <ul style="list-style-type: none;">
+                    <li><a href="#">Item 1</a></li>
+                </ul>
+                <button type="button" id="loginButton" style="width: 75px" class="mt-2 mb-2 p-3 btn btn-light btn-outline-dark btn-sm rounded-pill">Edit</button>
+            </div>
+        </div>
+        <div class="card m-2 align-self-start" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Dad</h5>
+                <ul style="list-style-type: none;">
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Item 2</a></li>
+                </ul>
+                <button type="button" id="loginButton" style="width: 75px" class="mt-2 mb-2 p-3 btn btn-light btn-outline-dark btn-sm rounded-pill">Edit</button>
+            </div>
+        </div>
+    </div>
+
     <footer>
  <div class="text-center p-3" style="position: absolute; bottom: 0; width: 100%; background-color: rgba(0, 0, 0, 0.2);">
         <h6 class="text-light">© 2022 Copyright:</h6>
         <h5><a class="text-light" href="https://github.com/MattG-Git/giftR">Giftr</a></h5>
   </div>
     </footer>
-	<script src="./js/index.js"></script>
+	<script src="./public/js/index.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-:root{
+ :root{
     --white: #f6f1eb;
     --green: #6a8255;
     --grey: #d7e2d7;
@@ -8,135 +8,55 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    background: var(--grey);
+    background: black;
+    height: 1000px;
 }
 
-.navbar-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: auto;
+#titleHeader{
     background-color: var(--brown);
+    color: var(--white);
 }
 
-#nameLabel {
-    color: var(--grey);
-    text-align: center;
-    background-size: cover;
-    padding: 10px;
-    background-color: var(--brown);
+#loginButton:hover,
+#darkModeButton:hover{
+    background-color: grey;
 }
 
-#xmasNavTree{ 
-    background-color: transparent;
+.lightMode{
+    background: white
 }
 
-.contentContainer{
-    padding: 10px 10px 10px 10px;
-    text-align: center;
-}
-
-#contentHeader{
-    text-align: center;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    border-bottom: #574539 1px solid;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
-#mainBudget{
-    color: var(--green)
-}
-
-#budgetInput{
-    width: 100px;
-    text-align: center;
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-.cardContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.cardContainer h3{
-    background-color: var(--green);
-    padding: 10px 100px 10px 100px;
-    margin: 10px 10px 10px 10px;
-    border: #574539 2px solid;
-}
-
-.card{
-    background-color: var(--brown);
-}
-
-#card1Content{
-    padding-bottom: 100px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    color: white;
-}
-
-#card2Content{
-    padding-bottom: 100px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    color: white;
-}
-
-#card3Content{
-    padding-bottom: 100px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    color: white;
-}
-
-#darkModeButton{
+.snow-bg {
+    position: relative;
+    max-height: fit-content;
+ }
+ 
+.snow-bg:after {
+    content: '';
+    display: block;
     position: absolute;
-    right: 5px;
-    top: 5px;
-    border-radius: 12px;
-    padding: 4px;
-    background-position: center;
-    transition: background 1s;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background-image: url('https://library.elementor.com/resources/christmas-snow-effect/s1.png'), url('https://library.elementor.com/resources/christmas-snow-effect/s2.png'), url('https://library.elementor.com/resources/christmas-snow-effect/s3.png');
+     animation: snow 10s linear infinite;
+}
+ 
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
 }
 
-#darkModeButton:active{
-    background-color: var(--green);
-    background-size: 100%;
-    transition: background-color 0s;
+@media screen and (max-width: 768px) {
+    .cardContainer{
+        flex-wrap: wrap;
+        max-width: 100%;  
+        padding-bottom: 10px
+    }
 }
-
-button {
-    font-family: 'Roboto', sans-serif;
-    width: 10rem;
-    border: none;
-    border-radius: 2px;
-    padding: 12px 18px;
-    text-transform: uppercase;
-    cursor: pointer;
-    color: black;
-    box-shadow: 0 0 4px black;
-    outline: none;
-  }
-
-.dark-mode {
-    background-color: black;
-    color: white;
-}
+  
+ 
