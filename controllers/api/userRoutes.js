@@ -1,6 +1,30 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+router.get('/', async (req, res) => {
+  try {
+    console.log('fetching user data')
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [
+        { model: People, 
+        include: [
+          { model: Gift,
+            attributes: ['name', 'price', 'location'],
+          },
+        ],
+       }],
+    });
+
+    const user = userData.get({ plain: true });
+    console.log(user)
+    res.json(user); 
+  } catch (err) {
+    console.log(err); 
+    res.status(500).json(err);
+  }
+});
+
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
