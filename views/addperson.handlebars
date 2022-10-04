@@ -2,22 +2,17 @@
   <div class="col-md-6">
     <h2>Add a Person To Your Holiday Tracker</h2>
 
-    <form class="form add-person-form mb-3" data-id="{{id}}">
+    <form class="form add-person-form mb-3" data-id="{{user.id}}">
       <div class="form-group">
         <label class="mb-3 pr-2" for="name">Name</label>
         <input class="form-input" type="text" id="name" name="name"/>
       </div>
-      <div class="form-group">
-        <label for="budget">Budget</label>
-        <input class="form-input" id="budget" name="budget"></input>
-        <label for="gift-name">Gift</label>
-        <input class="form-input" id="gift-name" name="gift-name"></input>
-        <label for="price">Price</label>
-        <input class="form-input" id="price" name="price"></input>
-        <label for="location">Gift Location</label>
-        <input class="form-input" id="location" name="location"></input>
-      </div>
-      <div class="form-group mt-3">
+        <div class="form-group">
+
+          <label for="budget">Budget</label>
+          <input class="form-input" id="budget" name="budget"></input>
+        </div>
+        <div class="form-group mt-3">
         <button type="submit" class="btn btn-secondary">Start Tracking</button>
       </div>
     </form>
