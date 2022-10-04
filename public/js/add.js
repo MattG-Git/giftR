@@ -4,24 +4,21 @@ const addButtonHandler = async (event) => {
     
     const name = document.querySelector('#name').value.trim();
     const budget = document.querySelector('#budget').value.trim();
-    const giftName = document.querySelector('#gift-name').value.trim();
-    const price = document.querySelector('#price').value.trim();
-   const location = document.querySelector('#location').value.trim();
+    const user_id = document.querySelector('.add-person-form').getAttribute('data-id');
 
 
     if (event.target.hasAttribute('data-id')) {
 
-        const response = await fetch(`/api/people,`, {
+        const response = await fetch(`/api/people`, {
             method: 'POST',
-            body: JSON.stringify({ name, budget, giftName, price, location }),
+            body: JSON.stringify({ user_id, name, budget }),
             headers: {
                 'Content-Type': 'application/json'
-            },
+            },  
         });
-
         if (response.ok) {
             document.location.replace('/all');
-        }else {
+        } else {
             alert ('Cannot Add The Person')
         }
     }

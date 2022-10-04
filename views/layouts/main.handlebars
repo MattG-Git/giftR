@@ -21,7 +21,7 @@
   <body class="snow-bg bg-dark">
     <!-- Navbar / Title "GiftR" -->
     <div id="titleHeader" class=" justify-content-around bg-dark">
-        <h1 class="mt-2 pt-2 align-item-start text-center">GiftR</h1> 
+        <h1 class="mt-2 pt-2 align-item-start text-center" href="/main">GiftR</h1> 
 
         {{#if logged_in}}
         <button type="button" id="logOutButton" style="position: absolute; top: 0; right: 0; font-weight: bolder; width: 120px" class="mt-2 mb-2 p-3 btn btn-light btn-outline-dark btn-sm rounded-pill">Logout</button>
@@ -36,7 +36,7 @@
     <div class="text-light mt-2 pt-2">
         <h2 class="text-center">Welcome to GiftR for those who love to give gifts and not to stress!</h2>
         <h2 class="text-center">Holiday Christmas Budget List</h2>
-        <h2 class="text-center">Budget:</h2>
+        {{!-- <h2 class="text-center">Budget:</h2> --}}
     </div>
     <!-- Cards Container Handlebar-->
     {{{body}}}

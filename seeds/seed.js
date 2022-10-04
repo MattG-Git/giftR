@@ -27,6 +27,7 @@ const seedDatabase = async () => {
     await Gift.create({
       ...gift,
       people_id: persons[Math.floor(Math.random() * persons.length)].id,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
 
