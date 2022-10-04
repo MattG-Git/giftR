@@ -17,7 +17,7 @@ const addButtonHandler = async (event) => {
             },  
         });
         if (response.ok) {
-            document.location.replace('/all');
+            document.location.replace('/');
         } else {
             alert ('Cannot Add The Person')
         }
