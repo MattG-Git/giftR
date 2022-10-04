@@ -8,10 +8,16 @@ const giftData = require('./giftData.json')
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const users = await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
+  const users = []
+
+  for (const user of userData) {
+    let _user = await User.create(user, {
+      individualHooks: true
+    });
+
+    users.push(_user)
+  }
+
   const persons = []
 
   for (const people of peopleData) {

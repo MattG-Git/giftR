@@ -11,7 +11,7 @@ People.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-People.hasOne(Gift, {
+People.hasMany(Gift, {
     foreignKey: 'people_id'
 });
 

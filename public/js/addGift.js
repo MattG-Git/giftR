@@ -12,7 +12,7 @@ const addGiftButtonHandler = async (event) => {
 
         const response = await fetch(`/api/gift`, { 
             method: 'POST', 
-            body: JSON.stringify({ people_id, name, price, location }),
+            body: JSON.stringify({ name, people_id, price, location }),
             headers: {
                 'Content-Type': 'application/json'
             }
