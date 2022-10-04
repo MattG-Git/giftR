@@ -14,7 +14,7 @@ const withAuth = require('../utils/auth');
       });
 
   const people = peopleData.map((p) => p.get({ plain: true }));
-
+      console.log(people); 
       res.render('main', { 
               people, 
               logged_in: req.session.logged_in 
@@ -24,24 +24,20 @@ const withAuth = require('../utils/auth');
         }
  });
 
-// router.get('/', (req, res) => {
-//   res.render('main')
-// });
-  
-
-
 router.get('/all', withAuth, async (req, res) => {
   try {
 
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [
-        { model: People }, 
-       // {model: Gift}
-      ],
+        { model: People, 
+        include: [
+          { model: Gift,
+            attributes: ['name', 'price', 'location'],
+          },
+        ],
+       }],
     });
-
-    //const giftData = await 
 
     const user = userData.get({ plain: true });
 
@@ -84,6 +80,10 @@ router.get('/people/:id', async (req, res) => {
 
 router.get('/addperson', (req, res) => { 
   res.render('addperson');
+}); 
+
+router.get('/addgift', (req, res) => { 
+  res.render('addgift');
 }); 
 
 router.get('/editperson/:id', withAuth, async (req, res) => {

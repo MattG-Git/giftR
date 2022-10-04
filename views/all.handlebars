@@ -1,17 +1,23 @@
 <h3>Hi {{name}}!</h3>
+<h3>Your Total Holiday Gift Budget Is: $ {{total_budget}} </h3>
 {{#if people.length}}
 <div class="row">
 {{#each people as |people|}}
  <div class="cardContainer d-flex p-3 justify-content-center">
         <div class="card m-2 align-self-start" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">{{people.name}} ${{people.budget}}</h5>
-              <h6 class="card-title">Gift: {{people.gift.name}}</h6>
-                <ul style="list-style-type: none;">
-                    <li>{{people.gift.price}}</li>
-                    <li>{{people.gift.location}}</li>
-                </ul>
-              <button type="button" id="editButton" style="width: 75px" class="mt-2 mb-2 p-3 btn btn-light btn-outline-dark btn-sm rounded-pill">Edit</button>
+              <h5 class="card-title">{{people.name}}</h5>
+              <h6>Budgeted Amount to Spend: $ {{people.budget}}</h6>
+              <br>
+              <h6 class="card-title">Gift: {{gift.name}}</h6>
+                  <ul style="list-style-type: none;">
+                      <li>Price: $ {{gift.price}}</li>
+                      <li>Found At: {{gift.location}}</li>
+                  </ul>
+
+              <button type="button" id="editButton" style="width: 75px" class="edits mt-2 mb-2 p-3 btn btn-light btn-outline-dark btn-sm rounded-pill">Edit</button>
+               <button type="button" id="deleteButton" style="width: 75px" class="deletes mt-2 mb-2 p-3 btn btn-light btn-outline-dark btn-sm rounded-pill">Delete Person</button>
+                <button type="button" id="addGiftButton" style="width: 75px" class="adds mt-2 mb-2 p-3 btn btn-light btn-outline-dark btn-sm rounded-pill">Add Gift</button>
             </div>
         </div>
 </div>
