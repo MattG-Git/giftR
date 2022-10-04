@@ -2,31 +2,9 @@ const router = require('express').Router();
 const { People, User, Gift } = require('../models');
 const withAuth = require('../utils/auth');
 
- router.get('/', withAuth, async (req, res) => {
-      try {
-        const peopleData = await People.findAll({
-          include: [
-            {
-              model: User,
-              attributes: ['name'],
-          },
-        ],
-      });
-
-  const people = peopleData.map((p) => p.get({ plain: true }));
-      console.log(people); 
-      res.render('main', { 
-              people, 
-              logged_in: req.session.logged_in 
-          });
-        } catch (err) {
-            res.status(500).json(err);
-        }
- });
-
-router.get('/all', withAuth, async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
-
+    console.log('loading homepage')
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [
@@ -40,7 +18,7 @@ router.get('/all', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-
+    console.log(user)
     res.render('all', {
       ...user,
       logged_in: true
@@ -82,10 +60,19 @@ router.get('/addperson', (req, res) => {
   res.render('addperson');
 }); 
 
-router.get('/addgift', (req, res) => { 
-  res.render('addgift');
-}); 
-
+router.get('/addgift/:id', async (req, res) => { 
+ try {
+  const personsData= await People.findByPk(req.params.id, {
+  }); 
+  const people = personsData.get({ plain : true });
+  res.render('addgift', {
+    ...people,
+  });
+} catch (err)
+{
+  console.log(err)
+  res.status(500).json(err);
+}}); 
 router.get('/editperson/:id', withAuth, async (req, res) => {
   try {
     const peopleData = await People.findByPk(req.params.id, {

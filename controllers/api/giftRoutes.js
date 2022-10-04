@@ -49,12 +49,11 @@ router.post('/', withAuth, async (req, res) => {
     const newGift = await Gift.create({
       ...req.body,
       user_id: req.session.user_id,
-      name: req.session.name,
-      price: req.session.price
     });
 
     res.status(200).json(newGift);
   } catch (err) {
+    console.log(err)
     res.status(400).json(err);
   }
 });

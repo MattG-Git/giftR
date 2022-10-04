@@ -15,7 +15,9 @@ addBtnHandler = async (event) => {
   addGiftBtnHandler = async (event) => {
     event.preventDefault(); 
   
-    window.location.replace('/addgift');
+  const people_id = event.target.getAttribute('data-id');
+
+    window.location.replace(`/addgift/${people_id}`);
   
   };
 
