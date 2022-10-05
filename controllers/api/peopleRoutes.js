@@ -24,7 +24,7 @@ router.get('/export', withAuth, async (req, res) => {
 
 const csvWriter = createCsvWriter({
   header: [
-    { id: "name", title: "USERNAME" },
+    { id: "name", title: "GIFT_RECIPIENT" },
     { id: "budget", title: "BUDGET" },
     { id: "gift_name", title: "GIFT_NAME" },
     { id: "gift_price", title: "GIFT_PRICE" },
