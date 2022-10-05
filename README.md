@@ -39,6 +39,9 @@ To use this application, first create an account or log in. Then either create a
 
 # Deployed Heroku application: 
 
-Please see [live page here]()
+Please see [live page here](https://agile-temple-95524.herokuapp.com/login)
 
 # Screenshot
+![Login Screen ](./public/assets/login_screenshot.png)
+![Dashboard ](./public/assets/user_dashboard_screenshot.png)
+![Final Exported CSV File ](./public/assets/final_file_csv.png)
