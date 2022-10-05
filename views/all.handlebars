@@ -4,7 +4,7 @@
 </div>
 
 {{#if people.length}}
-<div class="row">
+<div class="d-flex justify-content-around">
 {{#each people as |people|}}
  <div class="cardContainer d-flex p-3 justify-content-center">
         <div class="card m-2 align-self-start" style="width: 18rem;">
@@ -27,7 +27,7 @@
 {{/each}}
 </div>
 {{/if}}
-<div class="d-flex">
+<div class="d-flex justify-content-center">
   <button type="button" id="addButton" style="width: 75px" class="mt-2 mb-2 p-3 btn btn-light btn-outline-dark btn-sm rounded-pill">Add A Person</button>
   <button type="button" id="exportButton" style="width: 75px" class="mt-2 mb-2 p-3 btn btn-light btn-outline-dark btn-sm rounded-pill">Export CSV</button>
 </div>

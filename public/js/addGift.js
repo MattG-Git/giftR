@@ -1,6 +1,5 @@
 //event handler for the user to update one of their existing blog posts from the update.handlebars view
 const addGiftButtonHandler = async (event) => {
-    event.preventDefault();
     
     const name = document.querySelector('#gift-name').value.trim();
     const price = document.querySelector('#price').value.trim();
