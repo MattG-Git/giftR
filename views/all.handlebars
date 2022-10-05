@@ -16,8 +16,7 @@
                       <li>Found At: {{gift.location}}</li>
                   </ul>
             {{/each}}
-              <button type="button" id="editButton" style="width: 75px" class="edits mt-2 mb-2 p-3 btn btn-light btn-outline-dark btn-sm rounded-pill">Edit</button>
-               <button type="button" id="deleteButton" style="width: 75px" class="deletes mt-2 mb-2 p-3 btn btn-light btn-outline-dark btn-sm rounded-pill">Delete Person</button>
+               <button type="button" id="deleteButton" class="deletes mt-2 mb-2 p-3 btn btn-light btn-outline-dark btn-sm rounded-pill" data-id={{people.id}}>Delete Person</button>
                 <button type="button" id="addGiftButton" style="width: 75px" class="adds mt-2 mb-2 p-3 btn btn-light btn-outline-dark btn-sm rounded-pill" data-id={{people.id}}>Add Gift</button>
             </div>
         </div>
@@ -27,4 +26,4 @@
 {{/if}}
 <button type="button" id="addButton" style="width: 75px" class="mt-2 mb-2 p-3 btn btn-light btn-outline-dark btn-sm rounded-pill">Add A Person</button>
 
-	  <script src="./js/all.js"></script>
+<script src="./js/all.js"></script>

@@ -5,13 +5,6 @@ addBtnHandler = async (event) => {
   
   };
   
-  editBtnHandler = async (event) => {
-    event.preventDefault(); 
-  
-    window.location.replace('/editperson');
-  
-  };
-
   addGiftBtnHandler = async (event) => {
     event.preventDefault(); 
   
@@ -23,21 +16,33 @@ addBtnHandler = async (event) => {
 
 
   deleteBtnHandler = async (event) => {
+
     event.preventDefault(); 
-  
-// CODE GOES here
-  
+
+    const people_id = event.target.getAttribute('data-id');
+    console.log(people_id); 
+    
+    if (event.target.hasAttribute('data-id')) {
+
+      const response = await fetch(`/api/people/${people_id}`, { 
+          method: 'DELETE', 
+      });   
+      document.location.reload();
+      if (response.ok) {
+        console.log('successfully deleted the person')
+          window.location.reload();
+      } else {
+         console.log('Cannot Delete The Person')
+      }
+  }; 
+
+
   };
 
- 
+
 document 
 .querySelector('#addButton')
 .addEventListener('click', addBtnHandler);  
-
-let editButtons = document.querySelectorAll('.edits')
-editButtons.forEach((b) => {
-  b.addEventListener('click', editBtnHandler); 
-});
 
 let deleteButtons = document.querySelectorAll('.deletes')
 deleteButtons.forEach((b) => {
