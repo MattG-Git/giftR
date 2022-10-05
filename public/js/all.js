@@ -39,6 +39,10 @@ addBtnHandler = async (event) => {
 
   };
 
+    exportBtnHandler = async (event) => {
+      // const response = await fetch(`/api/people/export`); 
+      window.location.replace(`/api/people/export`);  
+    }
 
 document 
 .querySelector('#addButton')
@@ -54,3 +58,6 @@ addGiftButtons.forEach((b) => {
   b.addEventListener('click', addGiftBtnHandler); 
 });
 
+document 
+.querySelector('#exportButton')
+.addEventListener('click', exportBtnHandler);  
